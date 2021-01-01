@@ -7,9 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringFrameworkApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Spring Start....");
-		SpringApplication.run(SpringFrameworkApplication.class, args);
-		System.out.println("Spring End....");
+		BinarySearchImpl binarySearch = new BinarySearchImpl(new BubbleSortAlgo());
+		int result = binarySearch.binarySearch(new int[] {1, 2, 12, 7}, 2);
+		System.out.println(result);
+		
+		//SpringApplication.run(SpringFrameworkApplication.class, args);
 	}
-
 }
