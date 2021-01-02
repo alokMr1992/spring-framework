@@ -1,17 +1,19 @@
 package com.spring.basics;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
 	
 	@Autowired
-	private SortAlgo quickSortAlgo;
+	@Qualifier("quick")
+	private SortAlgo sortAlgo;
 	
 	public int binarySearch(int[] numbers, int numberToBeSearched) {
-		int[] sortedNumbers = quickSortAlgo.sort(numbers);
-		System.out.println(quickSortAlgo);
+		int[] sortedNumbers = sortAlgo.sort(numbers);
+		System.out.println(sortAlgo);
 		
 		return 3;
 	}
