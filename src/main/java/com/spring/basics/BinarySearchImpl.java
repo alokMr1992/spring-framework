@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 	
 	@Autowired
-	private SortAlgo sortAlgo;
+	private SortAlgo quickSortAlgo;
 	
 	public int binarySearch(int[] numbers, int numberToBeSearched) {
-		int[] sortedNumbers = sortAlgo.sort(numbers);
-		System.out.println(sortAlgo);
+		int[] sortedNumbers = quickSortAlgo.sort(numbers);
+		System.out.println(quickSortAlgo);
 		
 		return 3;
 	}
