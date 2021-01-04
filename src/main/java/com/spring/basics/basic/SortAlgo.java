@@ -1,4 +1,4 @@
-package com.spring.basics;
+package com.spring.basics.basic;
 
 public interface SortAlgo {
 

@@ -4,12 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.spring.basics.basic.BinarySearchImpl;
+
 @SpringBootApplication
-public class SpringFrameworkApplication {
+public class SpringFrameworkBasicApplication {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext applicationContext = SpringApplication.run(SpringFrameworkApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(SpringFrameworkBasicApplication.class, args);
 		
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		
