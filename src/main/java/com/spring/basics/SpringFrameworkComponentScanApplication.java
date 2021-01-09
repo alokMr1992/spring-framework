@@ -18,6 +18,7 @@ public class SpringFrameworkComponentScanApplication {
 		
 		try(AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringFrameworkComponentScanApplication.class)){
 			ComponentDao componentDao = applicationContext.getBean(ComponentDao.class);
+			
 			ComponentDao componentDao2 = applicationContext.getBean(ComponentDao.class);
 			
 			LOGGER.info("{}", componentDao);
