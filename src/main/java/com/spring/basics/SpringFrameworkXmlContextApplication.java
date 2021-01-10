@@ -15,6 +15,8 @@ public class SpringFrameworkXmlContextApplication {
 		try(ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml")) {
 			XmlPersonDao xmlPersonDao = applicationContext.getBean(XmlPersonDao.class);
 			
+			LOGGER.info("Beans Loaded --> {}", (Object) applicationContext.getBeanDefinitionNames());
+			
 			LOGGER.info("{}", xmlPersonDao);
 			LOGGER.info("{}", xmlPersonDao.getXmlJdbcConnection());
 		}
