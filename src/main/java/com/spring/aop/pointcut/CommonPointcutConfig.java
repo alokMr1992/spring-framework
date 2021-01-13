@@ -12,4 +12,7 @@ public class CommonPointcutConfig {
 	
 	@Pointcut("com.spring.aop.pointcut.CommonPointcutConfig.businessLayerPointcut() && com.spring.aop.pointcut.CommonPointcutConfig.dataLayerPointcut()")
 	public void allLayerPointcut() {}
+	
+	@Pointcut("@annotation(com.spring.aop.annotation.TrackTime)")
+	public void trackTimeAnnotation() {}
 }
