@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 import com.spring.basics.properties.ExternalPropertyService;
-import com.spring.basics.scope.PersonDao;
 
 @Configuration
 @ComponentScan("com.spring.basics.properties")
