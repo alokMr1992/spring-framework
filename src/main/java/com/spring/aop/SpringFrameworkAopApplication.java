@@ -27,7 +27,11 @@ public class SpringFrameworkAopApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
+		LOGGER.info("Execution starts from here...");
+		
 		LOGGER.info("{}", business1.calculateSomething());
 		LOGGER.info("{}", business2.calculateSomething());
+		
+		LOGGER.info("Execution ends here");
 	}
 }
