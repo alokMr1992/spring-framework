@@ -15,17 +15,17 @@ public class AfterAspect {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(AfterAspect.class);
 	
-	@AfterReturning(value = "execution(* com.spring.aop.business.*.*(..))", returning = "result")
+	@AfterReturning(value = "com.spring.aop.pointcut.CommonPointcutConfig.businessLayerPointcut()", returning = "result")
 	public void afterReturning(JoinPoint joinPoint, Object result) {
 		LOGGER.info("{} returned the result = {} ", joinPoint, result);
 	}
 	
-	@AfterThrowing(value = "execution(* com.spring.aop.business.*.*(..))", throwing = "exception")
+	@AfterThrowing(value = "com.spring.aop.pointcut.CommonPointcutConfig.businessLayerPointcut()", throwing = "exception")
 	public void afterThrowing(JoinPoint joinPoint, Object exception) {
 		LOGGER.info("{} thrown the exception = {} ", joinPoint, exception);
 	}
 	
-	@After(value = "execution(* com.spring.aop.business.*.*(..))")
+	@After("com.spring.aop.pointcut.CommonPointcutConfig.businessLayerPointcut()")
 	public void after(JoinPoint joinPoint) {
 		LOGGER.info("{} called after the interception ", joinPoint);
 	}

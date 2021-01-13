@@ -13,7 +13,7 @@ public class AroundAspect {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(AroundAspect.class);
 	
-	@Around("execution(* com.spring.aop.business.*.*(..))")
+	@Around("com.spring.aop.pointcut.CommonPointcutConfig.businessLayerPointcut()")
 	public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
 		Object proceed = joinPoint.proceed();

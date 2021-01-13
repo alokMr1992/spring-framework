@@ -13,7 +13,7 @@ public class UserAccessBeforeAspect {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserAccessBeforeAspect.class);
 	
-	@Before("execution(* com.spring.aop.business.*.*(..))")
+	@Before("com.spring.aop.pointcut.CommonPointcutConfig.dataLayerPointcut()")
 	public void before(JoinPoint joinPoint) {
 		LOGGER.info("Check access for User");
 		LOGGER.info("Allowed execution for -- {} ", joinPoint);
