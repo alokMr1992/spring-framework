@@ -27,5 +27,6 @@ public class SpringFrameworkDatabaseApplication implements CommandLineRunner {
 		LOGGER.info("\nPerson by Id 10001 -> {}", personJdbcDao.findById(10001));
 		LOGGER.info("\nPerson by name Alok -> {}", personJdbcDao.findByName("Alok"));
 		LOGGER.info("\nPerson by location Mumbai -> {}", personJdbcDao.findByLocation("Mumbai"));
+		LOGGER.info("\nPerson by name and location (Alok, Pune) -> {}", personJdbcDao.findByNameAndLocation("Alok", "Pune"));
 	}
 }

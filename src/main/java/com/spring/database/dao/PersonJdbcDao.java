@@ -20,6 +20,13 @@ public class PersonJdbcDao {
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Person>(Person.class));
 	}
 	
+	/**
+	 * queryForObject() method is used only to fetch unique single row,
+	 * It is basically used to query with Primary Key or Unique Id. 
+	 * 
+	 * @param id
+	 * @return single Object corresponding to the row data
+	 */
 	public Person findById(int id) {
 		final String sql = "select * from Person where id = ?";
 		return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Person>(Person.class), id);
@@ -33,5 +40,10 @@ public class PersonJdbcDao {
 	public List<Person> findByLocation(String location) {
 		final String sql = "select * from Person where location = ?";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Person>(Person.class), location);
+	}
+	
+	public List<Person> findByNameAndLocation(String name, String location) {
+		final String sql = "select * from Person where name = ? and location = ?";
+		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Person>(Person.class), name, location);
 	}
 }
