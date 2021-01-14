@@ -25,5 +25,7 @@ public class SpringFrameworkDatabaseApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		LOGGER.info("\nAll Person are -> {}", personJdbcDao.findAll());
 		LOGGER.info("\nPerson by Id 10001 -> {}", personJdbcDao.findById(10001));
+		LOGGER.info("\nPerson by name Alok -> {}", personJdbcDao.findByName("Alok"));
+		LOGGER.info("\nPerson by location Mumbai -> {}", personJdbcDao.findByLocation("Mumbai"));
 	}
 }
