@@ -19,4 +19,9 @@ public class PersonJdbcDao {
 		final String sql = "select * from Person";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Person>(Person.class));
 	}
+	
+	public Person findById(int id) {
+		final String sql = "select * from Person where id = ?";
+		return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Person>(Person.class), id);
+	}
 }

@@ -23,6 +23,7 @@ public class SpringFrameworkDatabaseApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		LOGGER.info("\nAll Person are --> {}", personJdbcDao.findAll());
+		LOGGER.info("\nAll Person are -> {}", personJdbcDao.findAll());
+		LOGGER.info("\nPerson by Id 10001 -> {}", personJdbcDao.findById(10001));
 	}
 }
