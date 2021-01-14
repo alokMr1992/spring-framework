@@ -1,0 +1,11 @@
+insert into Person(id, name, location, birth_date)
+values(10001, 'Alok', 'Pune', sysdate());
+
+insert into Person(id, name, location, birth_date)
+values(10002, 'Pravin', 'Mumbai', sysdate());
+
+insert into Person(id, name, location, birth_date)
+values(10003, 'Ramesh', 'Chennai', sysdate());
+
+insert into Person(id, name, location, birth_date)
+values(10004, 'Piyush', 'Kolkata', sysdate());
