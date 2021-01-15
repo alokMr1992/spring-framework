@@ -32,7 +32,7 @@ public class SpringFrameworkJpaApplication implements CommandLineRunner {
 		LOGGER.info("\nAll Person after deletion are -> {}", personJpaRepository.findAll());
 		LOGGER.info("\nInsert New Person, inserted row -> {}", personJpaRepository.insertOrUpdate(new Person("Bala", "Cape Town", new Date())));
 		LOGGER.info("\nAll Person after insertion are -> {}", personJpaRepository.findAll());
-		LOGGER.info("\nUpdate Person with id 10002, updated row -> {}", personJpaRepository.insertOrUpdate(new Person(10003, "Radha", "Delhi", new Date())));
+		LOGGER.info("\nUpdate Person with id 10003, updated row -> {}", personJpaRepository.insertOrUpdate(new Person(10003, "Radha", "Delhi", new Date())));
 		LOGGER.info("\nAll Person after updation are -> {}", personJpaRepository.findAll());
 	}
 }
