@@ -46,4 +46,11 @@ public class PersonJdbcDao {
 		final String sql = "select * from Person where name = ? and location = ?";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Person>(Person.class), name, location);
 	}
+	
+	public int deleteById(int id) {
+		final String sql = "delete from Person where id = ?";
+		return jdbcTemplate.update(sql, id);
+	}
+	
+	
 }

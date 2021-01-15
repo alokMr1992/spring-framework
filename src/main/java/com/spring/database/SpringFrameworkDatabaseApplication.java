@@ -28,5 +28,7 @@ public class SpringFrameworkDatabaseApplication implements CommandLineRunner {
 		LOGGER.info("\nPerson by name Alok -> {}", personJdbcDao.findByName("Alok"));
 		LOGGER.info("\nPerson by location Mumbai -> {}", personJdbcDao.findByLocation("Mumbai"));
 		LOGGER.info("\nPerson by name and location (Alok, Pune) -> {}", personJdbcDao.findByNameAndLocation("Alok", "Pune"));
+		LOGGER.info("\nDelete Person by Id 10002, rows deleted -> {}", personJdbcDao.deleteById(10002));
+		LOGGER.info("\nAll Person after deletion are -> {}", personJdbcDao.findAll());
 	}
 }
