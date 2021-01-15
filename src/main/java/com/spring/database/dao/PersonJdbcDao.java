@@ -57,5 +57,8 @@ public class PersonJdbcDao {
 		return jdbcTemplate.update(sql, id);
 	}
 	
-	
+	public int insertRecord(Person person) {
+		final String sql = "insert into Person(id, name, location, birth_date) values(?,?,?,?)";
+		return jdbcTemplate.update(sql, person.getId(), person.getName(), person.getLocation(), person.getBirthDate());
+	}
 }
