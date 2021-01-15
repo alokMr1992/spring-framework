@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.spring.database.custom.mapper.PersonRowMapper;
 import com.spring.database.entity.Person;
 
 @Repository
@@ -15,9 +16,13 @@ public class PersonJdbcDao {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
+	/**
+	 * Using Custom RowMapper for Person entity
+	 * @return
+	 */
 	public List<Person> findAll() {
 		final String sql = "select * from Person";
-		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Person>(Person.class));
+		return jdbcTemplate.query(sql, new PersonRowMapper());
 	}
 	
 	/**
