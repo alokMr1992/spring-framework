@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.spring.database.dao.PersonJpaRepository;
 import com.spring.database.entity.Person;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SpringFrameworkJpaApplication implements CommandLineRunner {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpringFrameworkJpaApplication.class);
