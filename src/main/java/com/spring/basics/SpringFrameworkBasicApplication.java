@@ -22,6 +22,9 @@ public class SpringFrameworkBasicApplication {
 			
 			int result = binarySearch.binarySearch(new int[] {1, 2, 12, 7}, 2);
 			System.out.println("Result = " + result);
+			
+			int cpuCores = Runtime.getRuntime().availableProcessors();
+			System.out.println("Number of CPU cores : " + cpuCores);
 		}
 	}
 }
